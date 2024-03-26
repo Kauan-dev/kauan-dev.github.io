@@ -1,0 +1,167 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #222f3e;
+    color: #f7f7f7;
+    font-family: 'Mulish', sans-serif;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 38rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5rem;
+    padding: 2rem 1.1rem;
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    animation: topdown 700ms;
+}
+
+header img {
+    width: clamp(10rem, 12rem + 10vw, 18rem);
+    border-radius: 1000px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: clamp(1rem, 2.2rem + 2vw, 3.4rem);
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.6rem;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.6rem;
+    animation: downtop 700ms;
+}
+
+button {
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1.4rem 0;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    text-transform: uppercase;
+    transition: all ease 0.1s;
+}
+
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4) {
+    background-color: #161a1e;
+    box-shadow: 0px 5px 0px 0px #111114;
+}
+
+button span img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    filter: invert(100%) grayscale(0%) brightness(10000%);
+}
+
+button:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer p {
+    color: white;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 7px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.card:hover+.footer p {
+    opacity: 1;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-height: 610px),
+(max-width: 251px) {
+
+    .footer,
+    .footer p {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 700px) {
+    body {
+        background: #0d1116;
+    }
+
+    .card {
+        background-color: #222f3e;
+        box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+    }
+}
