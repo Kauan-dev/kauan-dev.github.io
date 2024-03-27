@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 5rem;
+    gap: 7.5rem;
     padding: 2rem 1.1rem;
     border-radius: 8px;
 }
@@ -131,5 +131,6 @@ button:hover {
     .card {
         background-color: #222f3e;
         box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+        gap: 5rem;
     }
 }
