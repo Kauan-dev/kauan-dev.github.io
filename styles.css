@@ -99,29 +99,6 @@ button:hover {
     cursor: pointer;
 }
 
-.footer {
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-}
-
-.footer p {
-    color: white;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    bottom: 7px;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-.card:hover+.footer p {
-    opacity: 1;
-}
-
 @keyframes topdown {
     0% {
         opacity: 0;
@@ -143,15 +120,6 @@ button:hover {
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@media (max-height: 610px),
-(max-width: 251px) {
-
-    .footer,
-    .footer p {
-        opacity: 0;
     }
 }
 
